@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.secure.sudoku">
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false" />
+        android:required="true" />
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
@@ -24,7 +24,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".number_layout"></activity>
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/file_paths" />
+
+        <activity android:name=".number_layout" />
         <activity android:name=".capture_image" />
         <activity android:name=".MainActivity">
             <intent-filter>

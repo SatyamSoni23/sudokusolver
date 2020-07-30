@@ -1,3 +1,5 @@
+include ':puzzle_solver'
+include ':puzzle_scanner'
 include ':app'
 rootProject.name = "sudoku"
 include ':openCVLibrary342'
