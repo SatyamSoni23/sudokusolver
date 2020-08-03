@@ -1,10 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.secure.puzzle_scanner"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
@@ -26,7 +25,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.rmtheis:tess-two:9.1.0'
     implementation project(path: ':openCVLibrary342')
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 

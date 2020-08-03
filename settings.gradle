@@ -1,5 +1,5 @@
-include ':puzzle_solver'
-include ':puzzle_scanner'
+include ':app',':puzzle_solver',':puzzle_scanner',':tess-two'
+/*include ':puzzle_scanner'
 include ':app'
-rootProject.name = "sudoku"
+rootProject.name = "sudoku"*/
 include ':openCVLibrary342'

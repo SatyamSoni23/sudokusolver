@@ -73,6 +73,12 @@ public class Line {
         return destination.y;
     }
 
+    double getAngleFromXAxis() {
+        double radAngle = atan(getHeight() / getWidth());
+        double degAngle = radAngle * 180 / PI;
+        return degAngle;
+    }
+
     Point findIntersection(Line line2){
 
         double line1DeltaX = destination.x - origin.x;
