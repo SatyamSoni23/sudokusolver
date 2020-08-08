@@ -422,8 +422,8 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     private void initOcrLib() {
         String DATA_PATH = Environment.getExternalStorageDirectory() + "/tess/tessdata/"; // "/eng.traineddata";
         try{
-            /*File docsFolder = new File(Environment.getExternalStorageDirectory() + "/tess/tessdata/eng.traineddata");
-            if(docsFolder.exists()){
+            File docsFolder = new File(Environment.getExternalStorageDirectory() + "/tess/tessdata/eng.traineddata");
+            /*if(docsFolder.exists()){
                 Toast.makeText(this, "run1 success", Toast.LENGTH_LONG).show();
             }*/
             mTessBaseAPI = new TessBaseAPI();
