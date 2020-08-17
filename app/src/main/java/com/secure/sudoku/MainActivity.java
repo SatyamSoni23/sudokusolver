@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     private CameraBridgeViewBase cameraBridgeViewBase;
     private boolean sudoreg;
     private Bitmap puzzle;
-    Button RL, RR, scan, recapture;
+    Button rotate_left, rotate_right, scan, recapture;
     ProgressBar progressBar;
 
     Mat mRgba;
