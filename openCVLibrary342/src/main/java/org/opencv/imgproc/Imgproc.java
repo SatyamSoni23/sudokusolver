@@ -1498,7 +1498,7 @@ public class Imgproc {
     //
 
     //javadoc: approxPolyDP(curve, approxCurve, epsilon, closed)
-    public static void approxPolyDP(MatOfPoint2f curve, MatOfPoint2f approxCurve, double epsilon, boolean closed)
+    public static void approxPolyDP(MatOfPoint2f curve, MatOfPoint approxCurve, double epsilon, boolean closed)
     {
         Mat curve_mat = curve;
         Mat approxCurve_mat = approxCurve;
