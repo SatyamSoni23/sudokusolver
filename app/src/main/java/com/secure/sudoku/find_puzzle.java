@@ -61,10 +61,10 @@ public class find_puzzle {
     }
 
     private MatOfPoint approx(MatOfPoint cnt){
-        MatOfPoint2f double_max_area_contours = new MatOfPoint2f(cnt.toArray());
-        double peri = Imgproc.arcLength(double_max_area_contours, true);
-        MatOfPoint app = new MatOfPoint();
-        Imgproc.approxPolyDP(double_max_area_contours, app, 0.01*peri, true);
+        MatOfPoint2f double_max_area_contours =new MatOfPoint2f(cnt.toArray());
+        double peri= Imgproc.arcLength(double_max_area_contours,true);
+        MatOfPoint app=new MatOfPoint();
+        Imgproc.approxPolyDP(double_max_area_contours,app,0.01*peri,true);
         return app;
     }
 
@@ -112,15 +112,15 @@ public class find_puzzle {
         System.out.println("Optimized length is" + optimizedLen);
         Mat temp = rgbc.clone();
         for(int i=0; i<optimizedLen; i++){
-            System.out.print("Contour is");
+            System.out.print("Countour is");
             System.out.println(approx(contour.get(i)).dump());
-            System.out.print("First element is");
-            for(int il=0; il<approx(contour.get(i)).get(0, 0).length; il++)
-                System.out.println(approx(contour.get(i)).get(0, 0)[i]);
-            System.out.print("size is");
+            System.out.print("First ele is");
+            for(int i1=0;i1<approx(contour.get(i)).get(0,0).length;i1++)
+                System.out.println(approx(contour.get(i)).get(0,0)[i1]);
+            System.out.print("size is ");
             System.out.println(approx(contour.get(i)).rows());
-            if(approx(contour.get(i)).total() == 4){
-                puzzle_num = i;
+            if(approx(contour.get(i)).total()==4){
+                puzzle_num=i;
             }
         }
         System.out.println("---------------------------------------------");

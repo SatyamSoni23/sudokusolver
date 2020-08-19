@@ -72,7 +72,7 @@ public class extract_sudoku {
         for(int i=0; i<9; i++){
             for(int j=0; j<9; j++){
                 canvas = Mat.zeros(img.rows(), img.cols(), img.type());
-                Imgproc.rectangle(canvas, new org.opencv.core.Point(v[j].x-20, h[i].y-20), new org.opencv.core.Point(v[j+1].x+20, h[i+1].y+20), new Scalar(255, 255, 255), -1);
+                Imgproc.rectangle(canvas, new Point(v[j].x-20, h[i].y-20), new Point(v[j+1].x+20, h[i+1].y+20), new Scalar(255, 255, 255), -1);
                 Core.bitwise_and(img, canvas, canvas);
                 masked = Bitmap.createBitmap(img.cols(), img.rows(), Bitmap.Config.ARGB_8888);
                 Utils.matToBitmap(canvas, masked);
